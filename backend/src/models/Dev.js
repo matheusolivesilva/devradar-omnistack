@@ -5,7 +5,11 @@ const DevSchema = new mongoose.Schema({
     github_username: String,
     bio: String,
     avatar_url: String,
-    techs: [String]
+    techs: [String],
+    location: {
+        type: PointSchema,
+        index: '2dsphere'
+    }
 });
 
 
