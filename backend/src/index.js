@@ -6,7 +6,7 @@ const app = express();
 
 
 //WARNING!!! Replace <user> and <password> with your credentials
-mongoose.connect('mongodb+srv://<user>:<password>@cluster0-xsect.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://matheus:root@cluster0-xsect.mongodb.net/test?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
