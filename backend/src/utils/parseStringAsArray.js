@@ -1,3 +1,4 @@
 module.exports =function parseStringAsArray(arrayAsString) {
-    const techsArray = techs.split(',').map(tech => tech.trim());
+    const techsArray = arrayAsString.split(',').map(arrayAsString => arrayAsString.trim());
+    return techsArray;
 }

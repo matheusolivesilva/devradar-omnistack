@@ -24,7 +24,7 @@ module.exports = {
             };
         
             dev = await Dev.create({
-                github_username: github_username,
+                github_username,
                 name: name,
                 avatar_url,
                 bio,
