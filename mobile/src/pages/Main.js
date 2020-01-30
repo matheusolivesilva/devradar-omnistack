@@ -1,7 +1,7 @@
 import React, { useEffect} from 'react';
 import { StyleSheet } from 'react-native';
 import MapView from 'react-native-maps';
-import {requestPermissionsAsync, getCurrentPositionAsync } from 'expo-location';
+import { requestPermissionsAsync, getCurrentPositionAsync } from 'expo-location';
 function Main() {
     useEffect(() => {
         async function loadInicialPosition() {
