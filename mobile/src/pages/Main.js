@@ -2,7 +2,7 @@ import React, { useState, useEffect} from 'react';
 import { StyleSheet, Image, View, Text } from 'react-native';
 import MapView, { Marker, Callout } from 'react-native-maps';
 import { requestPermissionsAsync, getCurrentPositionAsync } from 'expo-location';
-function Main() {
+function Main({ navigation }) {
     const [currentRegion, setCurrentRegion] = useState(null);
     useEffect(() => {
         async function loadInicialPosition() {
@@ -32,7 +32,9 @@ function Main() {
     <MapView initialRegion={currentRegion} style={styles.map} >
         <Marker coordinate ={{ latitude: -23.5941774, longitude: -46.5811725 }} >
             <Image  style={styles.avatar} source={{ uri:  'https://avatars2.githubusercontent.com/u/19143379?s=460&v=4' }} />
-            <Callout>
+            <Callout onPress={() => {
+                navigation.navigate('Profile', { github_username: 'dialog'})
+            }}>
                  <View style={styles.callout}>
                     <Text style={styles.devName}>Matheus Oliveira da Silva</Text>
                     <Text style={styles.devBio}>Hi! I'm a brazilian hobbyist of software! Develop and design softwares is my passion!</Text>
